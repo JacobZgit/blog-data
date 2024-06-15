@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <base target="_parent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>{{title}}</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset 'icon/xu.jpeg'}}" />
+    <link type="text/css" rel="stylesheet" href="{{asset 'css/github-markdown.css'}}">
+    <link type="text/css" rel="stylesheet" href="{{asset 'css/pilcrow.css'}}">
+    <link type="text/css" rel="stylesheet" href="{{asset 'css/hljs-github.min.css'}}"/>
+  </head>
+  <body>
+    {{#if headings}}
+      <div class="row">
+        <a href="https://xujiyou.work">
+          <div class="title">
+            许吉友 - 运维
+          </div>
+        </a>
+        <div class="menu">
+          {{~> toc}}
+        </div>
+        <div class="markdown-body main">
+          {{~> content}}
+        </div>
+      </div>
+    {{else}}
+      <div class="markdown-body">
+        {{~> content}}
+      </div>
+    {{/if}}
+  </body>
+</html>
